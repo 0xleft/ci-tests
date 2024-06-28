@@ -1,0 +1,28 @@
+name: Env persistence test
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  env-persistence:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository to the GitHub Actions runner
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run a command
+        env:
+          MY_ENV_VAR: "Hello, world!"
+        run: echo $MY_ENV_VAR
+
+      - name: Run another command
+        run: echo $MY_ENV_VAR
+
+      - name: Set an environment variable
+        run: echo "MY_ENV_VAR=Hello, world!" >> $GITHUB_ENV
+
+      - name: Run a command
+        run: echo $MY_ENV_VAR
