@@ -4,6 +4,9 @@ on:
   pull_request:
     branches: [ master ]
 
+env:
+  NX_CLOUD_ACCESS_TOKEN: "SECRET"
+
 jobs:
   env-persistence:
     name: Test
@@ -26,3 +29,6 @@ jobs:
 
       - name: Run a command
         run: echo $MY_ENV_VAR
+
+      - name: test
+        run: echo $NX_CLOUD_ACCESS_TOKEN
