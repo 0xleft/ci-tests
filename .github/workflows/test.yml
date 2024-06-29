@@ -8,7 +8,7 @@ on:
       - transferred
 
 env:
-  NX_CLOUD_ACCESS_TOKEN: "SECRET"
+  NX_CLOUD_ACCESS_TOKEN: ${{ secrets.test }}
 
 jobs:
   env-persistence:
@@ -35,6 +35,8 @@ jobs:
 
       - name: test
         run: echo $NX_CLOUD_ACCESS_TOKEN
+        env:
+          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.TEST }}
 
       - name: bad
         run: npm install
