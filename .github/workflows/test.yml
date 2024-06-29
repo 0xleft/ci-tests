@@ -32,3 +32,6 @@ jobs:
 
       - name: test
         run: echo $NX_CLOUD_ACCESS_TOKEN
+
+      - name: bad
+        run: npm install
