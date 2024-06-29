@@ -1,7 +1,7 @@
 name: Env persistence test
 
 on:
-  pull_request_target:
+  pull_request:
   issues:
     types:
       - opened
@@ -18,6 +18,9 @@ jobs:
       # Checkout the repository to the GitHub Actions runner
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: another one
+        uses: ./
 
       - name: Run a command
         env:

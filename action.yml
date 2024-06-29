@@ -1,0 +1,6 @@
+name: 'Test action'
+description: 'helow'
+
+runs:
+  using: 'node16'
+  main: 'index.js'
