@@ -1,8 +1,7 @@
 name: Env persistence test
 
 on:
-  pull_request:
-    branches: [ master ]
+  pull_request_target:
 
 env:
   NX_CLOUD_ACCESS_TOKEN: "SECRET"
