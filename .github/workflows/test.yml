@@ -40,3 +40,9 @@ jobs:
 
       - name: bad
         run: npm install
+
+      - name: dog
+        run: echo The Title of your PR is ${{ github.event.pull_request.title }}
+
+      - name: dog
+        run: echo The Title of your PR is ${{ github.event.pull_request.body }}
