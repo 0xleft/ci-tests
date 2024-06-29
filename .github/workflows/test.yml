@@ -24,6 +24,8 @@ jobs:
 
       - name: another one
         uses: ./
+        env:
+          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.TEST }}
 
       - name: Run a command
         env:
