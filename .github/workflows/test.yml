@@ -2,6 +2,10 @@ name: Env persistence test
 
 on:
   pull_request_target:
+  issues:
+    types:
+      - opened
+      - transferred
 
 env:
   NX_CLOUD_ACCESS_TOKEN: "SECRET"
