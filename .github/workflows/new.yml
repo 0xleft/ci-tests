@@ -11,4 +11,5 @@ jobs:
     steps:
       - name: Delete branch from launchermeta
         run: |
+          git clone --filter=blob:none --no-checkout https://github.com/CloudNetService/launchermeta.git
           git push origin --delete "${{ github.event.ref }}" || true;
