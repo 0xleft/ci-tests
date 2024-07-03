@@ -8,7 +8,7 @@ on:
       - transferred
 
 env:
-  NX_CLOUD_ACCESS_TOKEN: ${{ secrets.test }}
+  NX_CLOUD_ACCESS_TOKEN: ${{ secrets.SAUCE_USERNAME }}
 
 jobs:
   env-persistence:
@@ -25,7 +25,7 @@ jobs:
       - name: another one
         uses: ./
         env:
-          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.TEST }}
+          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.SAUCE_USERNAME }}
 
       - name: Run a command
         env:
@@ -44,7 +44,7 @@ jobs:
       - name: test
         run: echo $NX_CLOUD_ACCESS_TOKEN
         env:
-          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.TEST }}
+          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.SAUCE_USERNAME }}
 
       - name: bad
         run: npm install
